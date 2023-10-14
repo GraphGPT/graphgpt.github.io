@@ -50,8 +50,8 @@
                 <div class="column has-text-centered">
                     <h1 class="title is-1 publication-title"
                         style="display: flex;flex-direction: row;align-items: center;justify-content: center;margin-bottom: 5px;"><img
-                            src="./static/images/logo.png" width="60" height="60" style="margin-right: 10px;">NExT-GPT:</h1>
-                    <h1 class="title is-2 publication-title">Any-to-Any Multimodal Large Language Model</h1>
+                            src="./static/tjb_images/logo_4.png" width="60" height="60" style="margin-right: 10px;">GraphGPT:</h1>
+                    <h1 class="title is-2 publication-title">Graph Large Language Models</h1>
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
               <a href="https://tjb-tech.github.io/">Jiabin Tang</a>,</span>
@@ -70,7 +70,7 @@
                     </div>
 
                     <div class="is-size-5 publication-authors" style="margin-top: 10px;">
-                        <span class="author-block"><a href="https://www.nextcenter.org/">Data Intelligence Lab</a>, University of Hong Kong</span>
+                        <span class="author-block"><a href="https://sites.google.com/view/chaoh/group-join-us">Data Intelligence Lab</a>, University of Hong Kong</span>
                     </div>
 
                     <div class="is-size-5 publication-authors">
@@ -102,7 +102,7 @@
 
                             <!-- Code Link. -->
                             <span class="link-block">
-                <a href="https://github.com/NExT-GPT/NExT-GPT"
+                <a href="https://github.com/GraphGPT/GraphGPT"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -113,7 +113,7 @@
 
 
                             <span class="link-block">
-                <a href="https://github.com/NExT-GPT/NExT-GPT" target="_blank"
+                <a href="https://github.com/GraphGPT/GraphGPT" target="_blank"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fa fa-database"></i>
@@ -144,21 +144,7 @@
 </section>
 
 
-<!-- <section class="section">
-    <div class="container is-max-desktop">
-        <!-- Paper video. -->
-        <div class="columns is-centered has-text-centered">
-            <div class="column is-full-width">
-                <h2 class="title is-2">Video Presentation</h2>
-                <div class="publication-video">
-                    <iframe src="https://www.youtube.com/embed/aqw2SCWeWD0?si=jIKgOkew2rmRROUy"
-                            frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                </div>
-            </div>
-        </div>
-        <!--/ Paper video. -->
-    </div>
-</section> -->
+
 
 
 <section class="section">
@@ -201,7 +187,7 @@
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 1:</b> By connecting LLM with multimodal adaptors and diffusion decoders, NExT-GPT achieves universal
+                                <b>Figure 1:</b> By connecting LLM with multimodal adaptors and diffusion decoders, GraphGPT achieves universal
                                 multimodal understanding and any-to-any modality input and output.
                             </font>
                         </p>
@@ -217,7 +203,7 @@
                         </li>
                         <li>
                             <b>LLM Understanding and Reasoning Stage.</b>
-                            An LLM is used as the core agent of NExT-GPT.
+                            An LLM is used as the core agent of GraphGPT.
                             Technically, we employ the Vicuna.
                             LLM takes as input the representations from different modalities and carries out semantic understanding and reasoning over
                             the inputs.
@@ -250,7 +236,7 @@
 
                 <div class="content has-text-justified">
                     <p>
-                        In Figure 2 we further illustrate the inference procedure of NExT-GPT.
+                        In Figure 2 we further illustrate the inference procedure of GraphGPT.
                         Given certain user inputs of any combination of modalities, the corresponding modal encoders and projectors transform them
                         into feature representations and passed to LLM (except the text inputs, which will be directly fed into LLM).
                         Then, LLM decides what content to generate, i.e., textual tokens, and modality signal tokens.
@@ -269,7 +255,7 @@
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 2:</b> NExT-GPT inference process. Grey colors denote the deactivation of the modules.
+                                <b>Figure 2:</b> GraphGPT inference process. Grey colors denote the deactivation of the modules.
                             </font>
                         </p>
                     </figcaption>
@@ -332,7 +318,7 @@
                         As illustrated in Figure 4, when an IT dialogue sample is fed into the system, the LLM reconstructs and generates the textual
                         content of input (and represents the multimodal content with the multimodal signal tokens).
                         The optimization is imposed based on gold annotations and LLM's outputs.
-                        In addition to the LLM tuning, we also fine-tune the decoding end of NExT-GPT.
+                        In addition to the LLM tuning, we also fine-tune the decoding end of GraphGPT.
                         We align the modal signal token representation encoded by the output projection with the gold multimodal caption
                         representation encoded by the diffusion condition encoder.
                         Thereby, the comprehensive tuning process brings closer to the goal of faithful and effective interaction with users.
@@ -1713,7 +1699,7 @@
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <pre><code>@articles{wu2023nextgpt,
-  title={NExT-GPT: Any-to-Any Multimodal LLM},
+  title={GraphGPT: Any-to-Any Multimodal LLM},
   author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Tat-Seng Chua},
   journal = {CoRR},
   volume = {abs/2309.05519},
