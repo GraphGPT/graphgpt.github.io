@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="description"
-          content="NExT-GPT: Any-to-Any Multimodal Large Language Model">
-    <meta name="keywords" content="text-to-image generation, Large Language Models, scene synthesis">
+          content="GraphGPT: Graph Large Language Models">
+    <meta name="keywords" content="Graph learning, Large Language Models">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>NExT-GPT</title> 
+    <title>GraphGPT</title> 
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -22,7 +22,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
           rel="stylesheet">
-    <link rel="icon" href="./static/images/logo.png">
+    <link rel="icon" href="./static/tjb_images/logo_4.png">
     <link rel="stylesheet" href="./static/css/bulma.min.css">
     <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
@@ -54,21 +54,23 @@
                     <h1 class="title is-2 publication-title">Any-to-Any Multimodal Large Language Model</h1>
                     <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://chocowu.github.io/">Shengqiong Wu</a>,</span>
+              <a href="https://tjb-tech.github.io/">Jiabin Tang</a>,</span>
                         <span class="author-block">
-              <a href="https://haofei.vip/">Hao Fei</a><sup>*</sup>,
+              <a href="https://yuh-yang.github.io/">Yuhao Yang</a>,
             </span>
                         <span class="author-block">
-              <a href="#">Leigang Qu</a>,</span>
+              <a href="#">Wei Wei</a>,</span>
                         <span class="author-block">
-              <a href="https://jiwei0523.github.io/">Wei Ji</a>,</span>
+              <a href="https://harryshil.github.io/">Lei Shi</a>,</span>
                         <span class="author-block">
-              <a href="https://www.chuatatseng.com/">Tat-Seng Chua</a>
+              <a href="#">Lixin Su</a>,</span>
+              <a href="https://sites.google.com/view/chaoh">Chao Huang</a><sup>*</sup>,
+            <!-- </span> -->
             </span>
                     </div>
 
                     <div class="is-size-5 publication-authors" style="margin-top: 10px;">
-                        <span class="author-block"><a href="https://www.nextcenter.org/">NExT++ Lab</a>, National University of Singapore</span>
+                        <span class="author-block"><a href="https://www.nextcenter.org/">Data Intelligence Lab</a>, University of Hong Kong</span>
                     </div>
 
                     <div class="is-size-5 publication-authors">
@@ -142,7 +144,7 @@
 </section>
 
 
-<section class="section">
+<!-- <section class="section">
     <div class="container is-max-desktop">
         <!-- Paper video. -->
         <div class="columns is-centered has-text-centered">
@@ -156,7 +158,7 @@
         </div>
         <!--/ Paper video. -->
     </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -167,20 +169,7 @@
                 <h2 class="title is-2">Abstract</h2>
                 <div class="content has-text-justified">
                     <p>
-                        While recently Multimodal Large Language Models (MM-LLMs) have made exciting strides, they mostly fall prey to the limitation
-                        of only input-side multimodal understanding, without the ability to produce content in multiple modalities.
-                        As we humans always perceive the world and communicate with people through various modalities, developing any-to-any MM-LLMs
-                        capable of accepting and delivering content in any modality becomes essential to human-level AI.
-                        To fill the gap, we present an end-to-end general-purpose any-to-any MM-LLM system, <b>NExT-GPT</b>.
-                        We connect an LLM with multimodal adaptors and different diffusion decoders, enabling NExT-GPT to perceive inputs and generate
-                        outputs in arbitrary combinations of text, images, videos, and audio.
-                        By leveraging the existing well-trained highly-performing encoders and decoders, NExT-GPT is tuned with only a small amount of
-                        parameter (1%) of certain projection layers, which not only benefits low-cost training and also facilitates convenient
-                        expansion to more potential modalities.
-                        Moreover, we introduce a modality-switching instruction tuning (MosIT) and manually curate a high-quality dataset for MosIT,
-                        based on which NExT-GPT is empowered with complex cross-modal semantic understanding and content generation.
-                        Overall, our research showcases the promising possibility of building an AI agent capable of modeling universal modalities,
-                        paving the way for more human-like AI research in the community.
+                        Graph Neural Networks (GNNs) have advanced graph structure understanding via recursive information exchange and aggregation among graph nodes. To improve model robustness, self-supervised learning (SSL) has emerged as a promising approach for data augmentation. However, existing methods for generating pre-trained graph embeddings often rely on fine-tuning with specific downstream task labels, which limits their usability in scenarios where labeled data is scarce or unavailable. To address this, our research focuses on advancing the generalization capabilities of graph models in challenging zero-shot learning scenarios. Inspired by the success of large language models (LLMs), we aim to develop a graph-oriented LLM that can achieve high generalization across diverse downstream datasets and tasks, even without any information available from the downstream graph data. In this work, we present the <b>GraphGPT</b> framework that aligns LLMs with graph structural knowledge with a graph instruction tuning paradigm. Our framework incorporates a text-graph grounding component to establish a connection between textual information and graph structures. Additionally, we propose a dual-stage instruction tuning paradigm, accompanied by a lightweight graph-text alignment projector. This paradigm explores self-supervised graph structural signals and task-specific graph instructions, to guide LLMs in understanding complex graph structures and improving their adaptability across different downstream tasks. Our framework is evaluated on supervised and zero-shot graph learning tasks, demonstrating superior generalization and outperforming state-of-the-art baselines.
                     </p>
                 </div>
             </div>
