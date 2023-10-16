@@ -195,33 +195,22 @@
                     <p>
                     <ul>
                         <li>
-                            <b>Multimodal Encoding Stage.</b> Leveraging existing well-established models to encode inputs of various modalities.
-                            Here we take advantage of the ImageBind, which is a unified high-performance encoder across six modalities.
-                            Then, via the linear projection layer, different input representations are mapped into language-like representations that
-                            are comprehensible to the LLM.
+                            <b>Structural Information Encoding with Text-Graph Grounding.</b> ...
+                            <img class="columns is-centered has-text-centered" src="./static/images/config.png" alt="Teaser" width="85%"
+                         style="margin:0 auto">
                         </li>
                         <li>
-                            <b>LLM Understanding and Reasoning Stage.</b>
-                            An LLM is used as the core agent of GraphGPT.
-                            Technically, we employ the Vicuna.
-                            LLM takes as input the representations from different modalities and carries out semantic understanding and reasoning over
-                            the inputs.
-                            It outputs 1) the textual responses directly, and 2) signal tokens of each modality that serve as instructions to dictate
-                            the decoding layers whether to generate multimodal contents, and what content to produce if yes.
+                            <b>Dual-Stage Graph Instruction Tuning.</b>
+                            ...
                         </li>
                         <li>
-                            <b>Multimodal Generation Stage.</b>
-                            Receiving the multimodal signals with specific instructions from LLM (if any), the Transformer-based output projection
-                            layers map the signal token representations into the ones that are understandable to following multimodal decoders.
-                            Technically, we employ the current off-the-shelf latent conditioned diffusion models of different modal generations, i.e.,
-                            Stable Diffusion (SD) for image synthesis, Zeroscope for video synthesis, and AudioLDM for audio synthesis.
+                            <b>Chain-of-Thought (CoT) Distillation.</b>
+                            ...
                         </li>
                     </ul>
                     </p>
                     <br>
 
-                    <img class="columns is-centered has-text-centered" src="./static/images/config.png" alt="Teaser" width="85%"
-                         style="margin:0 auto">
                 </div>
                 <br/>
 
@@ -231,21 +220,11 @@
         <!-- Inference -->
         <div class="columns is-centered">
             <div class="column is-full-width">
-                <h2 class="title is-3">• System Inference</h2>
+                <h2 class="title is-3">• Instruction Design</h2>
 
                 <div class="content has-text-justified">
                     <p>
-                        In Figure 2 we further illustrate the inference procedure of GraphGPT.
-                        Given certain user inputs of any combination of modalities, the corresponding modal encoders and projectors transform them
-                        into feature representations and passed to LLM (except the text inputs, which will be directly fed into LLM).
-                        Then, LLM decides what content to generate, i.e., textual tokens, and modality signal tokens.
-                        If LLM identifies a certain modality content (except language) to be produced, a special type of token will be output
-                        indicating the activation of that modality; otherwise, no special token output means deactivation of that modality.
-                        Technically, we design the '&lt;IMG<sub>i</sub>&gt;' (i=0,...,4) as image signal tokens;
-                        '&lt;AUD<sub>i</sub>&gt;' (i=0,...,8) as audio signal tokens; and
-                        '&lt;VID<sub>i</sub>&gt;' (i=0,...,24) as video signal tokens.
-                        After LLM, the text responses are output to the user; while the representations of the signal tokens of certain activated
-                        modalities are passed to the corresponding diffusion decoders for content generation.
+                        ...
                     </p>
                     <br>
                     <img class="columns is-centered has-text-centered" src="./static/images/inference.png" alt="Teaser" width="100%"
@@ -254,7 +233,7 @@
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 2:</b> GraphGPT inference process. Grey colors denote the deactivation of the modules.
+                                <b>Figure 2:</b> Our instruction designs for graph matching task (upper), node classification (middle) and link prediction (lower).
                             </font>
                         </p>
                     </figcaption>
@@ -264,7 +243,7 @@
             </div>
         </div>
 
-        <!-- Alignment -->
+<!--         <!-- Alignment -->
         <div class="columns is-centered">
             <div class="column is-full-width">
                 <h2 class="title is-3">• Lightweight Multimodal Alignment Learning</h2>
@@ -303,9 +282,9 @@
 
             </div>
         </div>
+ -->
 
-
-        <!-- Instruction -->
+<!--         <!-- Instruction -->
         <div class="columns is-centered">
             <div class="column is-full-width">
                 <h2 class="title is-3">• Modality-switching Instruction Tuning (MosIT)</h2>
@@ -351,7 +330,7 @@
 
     </div>
 </section>
-
+ -->
 
 <section class="section">
     <div class="container is-max-desktop">
@@ -478,7 +457,7 @@
 
                 <br/>
                 <!--            Example-2-->
-                <h3 class="title is-4">• Example-2: Text+Image → Text+Image+Video</h3>
+<!--                 <h3 class="title is-4">• Example-2: Text+Image → Text+Image+Video</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -582,14 +561,14 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-2-->
 
 
                 <br/>
                 <!--            Example-3-->
-                <h3 class="title is-4">• Example-3: Text+Video → Text+Image</h3>
-                <div class="content has-text-justified">
+<!--                 <h3 class="title is-4">• Example-3: Text+Video → Text+Image</h3>
+<!--                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
                          style="box-sizing: border-box;border-width: 2px;border-style: solid;border-color: #f66c0f;border-radius: 11px;padding: 25px;padding-top: 30px;padding-bottom: 30px;">
@@ -667,13 +646,13 @@
 
                         </div>
                     </div>
-                </div>
+                </div> --> -->
                 <!--          End  Example-3-->
 
 
                 <br/>
                 <!--            Example-4-->
-                <h3 class="title is-4">• Example-4: Text+Video → Text+Audio</h3>
+<!--                 <h3 class="title is-4">• Example-4: Text+Video → Text+Audio</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -796,14 +775,14 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-4-->
 
 
 
                 <br/>
                 <!--            Example-5-->
-                <h3 class="title is-4">• Example-5: Text+Audio → Text+Image+Video</h3>
+<!--                 <h3 class="title is-4">• Example-5: Text+Audio → Text+Image+Video</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -880,7 +859,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-5 -->
 
 
@@ -888,7 +867,7 @@
 
                 <br/>
                 <!--            Example-6 -->
-                <h3 class="title is-4">• Example-6: Text → Text+Image+Video+Audio</h3>
+<!--                 <h3 class="title is-4">• Example-6: Text → Text+Image+Video+Audio</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -1067,7 +1046,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-6-->
 
 
@@ -1075,7 +1054,7 @@
 
                 <br/>
                 <!--            Example-7 -->
-                <h3 class="title is-4">• Example-7: Text → Text+Image</h3>
+<!--                 <h3 class="title is-4">• Example-7: Text → Text+Image</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -1160,7 +1139,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-7-->
 
 
@@ -1169,7 +1148,7 @@
 
                 <br/>
                 <!--            Example-8-->
-                <h3 class="title is-4">• Example-8: Text+Video → Text+Image+Audio</h3>
+<!--                 <h3 class="title is-4">• Example-8: Text+Video → Text+Image+Audio</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -1271,7 +1250,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-8 -->
 
 
@@ -1279,7 +1258,7 @@
 
                 <br/>
                 <!--            Example-9 -->
-                <h3 class="title is-4">• Example-9: Text → Text+Image+Video+Audio</h3>
+<!--                 <h3 class="title is-4">• Example-9: Text → Text+Image+Video+Audio</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -1383,7 +1362,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-9-->
 
 
@@ -1391,7 +1370,7 @@
 
                 <br/>
                 <!--            Example-10 -->
-                <h3 class="title is-4">• Example-10: Text → Text+Image</h3>
+<!--                 <h3 class="title is-4">• Example-10: Text → Text+Image</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -1494,7 +1473,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-10 -->
 
 
@@ -1503,7 +1482,7 @@
 
                 <br/>
                 <!--            Example-11 -->
-                <h3 class="title is-4">• Example-11: Text+Image → Text+Image</h3>
+<!--                 <h3 class="title is-4">• Example-11: Text+Image → Text+Image</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -1558,14 +1537,14 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-11 -->
 
 
 
                 <br/>
                 <!--            Example-12 -->
-                <h3 class="title is-4">• Example-12: Text+Image → Text+Audio</h3>
+<!--                 <h3 class="title is-4">• Example-12: Text+Image → Text+Audio</h3>
                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
@@ -1641,7 +1620,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!--          End  Example-12-->
 
 
@@ -1658,7 +1637,7 @@
 </section>
 
 
-<section class="section">
+<!-- <section class="section">
     <div class="container is-max-desktop">
 
         <!--    <div class="columns is-centered has-text-centered">-->
@@ -1691,17 +1670,16 @@
         </div>
 
     </div>
-</section>
+</section> -->
 
 
 <section class="section" id="BibTeX">
     <div class="container is-max-desktop content">
         <h2 class="title">BibTeX</h2>
         <pre><code>@articles{wu2023nextgpt,
-  title={GraphGPT: Any-to-Any Multimodal LLM},
-  author={Shengqiong Wu, Hao Fei, Leigang Qu, Wei Ji, Tat-Seng Chua},
-  journal = {CoRR},
-  volume = {abs/2309.05519},
+  title={Graph Instruction Tuning for Large Language Models},
+  author={Jiabin Tang, Yuhao Yang, Wei Wei, Lei Shi, Lixin Su, Suqi Cheng, Dawei Yin, Chao Huang},
+  journal = {arXiv preprint},
   year={2023}
 }
 </code></pre>
