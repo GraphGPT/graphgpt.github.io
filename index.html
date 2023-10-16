@@ -195,17 +195,17 @@
                     <p>
                     <ul>
                         <li>
-                            <b>Structural Information Encoding with Text-Graph Grounding.</b> ...
+                            <b>Structural Information Encoding with Text-Graph Grounding.</b> To enhance the understanding of graph structural information by large language models, our framework emphasizes aligning the encoding of graph structures with the natural language space. This alignment aims to enable language models to effectively comprehend and interpret the structural elements of the graph, leveraging their inherent language understanding capabilities. To achieve this objective, we introduce a text-graph grounding paradigm that generates prompts designed to preserve the graph’s structural context for language models. This paradigm acts as a bridge, connecting the semantic understanding of textual information with the inherent structural relationships found within the graph.
                             <img class="columns is-centered has-text-centered" src="./static/images/config.png" alt="Teaser" width="50%"
                          style="margin:0 auto">
                         </li>
                         <li>
                             <b>Dual-Stage Graph Instruction Tuning.</b>
-                            ...
+                            The dual-stage graph instruction tuning paradigm proposed in this work builds upon the concept of instruction tuning, which has been recently introduced to enhance the adaptability of language models for specific domains [45]. In this paradigm, we aim to align the language capacity of the model with the nuances of graph learning tasks, enabling the language model to generate more accurate and contextually appropriate responses for graph-structured data.
                         </li>
                         <li>
                             <b>Chain-of-Thought (CoT) Distillation.</b>
-                            ...
+                            When faced with diverse graph data, language models may encounter new or unfamiliar patterns and structures. This distribution shift can pose challenges in generating accurate and coherent responses, especially when the number of node classes varies across different types of graph data. To address this challenge and boost accuracy in the presence of distribution shift, it is essential to equip our GraphGPT with step-by-step reasoning abilities. In this regard, we propose utilizing the Chain-of-Thought (COT) technique [47], which explicitly models the flow of thoughts and reasoning steps. By incorporating COT, our language model improves the coherence and consistency of generated text. It enables the model to follow a logical progression of ideas, enhancing its ability to understand and reason about the given graph data.
                         </li>
                     </ul>
                     </p>
@@ -224,7 +224,7 @@
 
                 <div class="content has-text-justified">
                     <p>
-                        ...
+                        We adopt a similar instruction template, which consists of three parts. To generate graph information for each node, we employ the same neighbor sampling approach used in the first stage. This approach ensures that relevant graph information is captured, with each node acting as the central node. For the node classification task, the human question instruction contains both the indicator token <graph> and specific text information about the central node. This instruction prompts the language model to predict the category of the central node based on both the graph structure data and the accompanying text information. An example of the instruction data for different tasks can be seen in Figure 4, providing a visual representation of how the instruction is structured and presented to the language model.
                     </p>
                     <br>
                     <img class="columns is-centered has-text-centered" src="./static/images/inference.png" alt="Teaser" width="100%"
@@ -310,45 +310,77 @@
 
                 <h4 class="title is-4">Overall Performance</h4>
                 <p>
-                    Performance comparison of various methods on node classification under both supervised and zero-shot settings.
+                    ...
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result1.png" alt="Teaser" width="100%" style="margin:0 auto">
-
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 4:</b> Performance comparison of various methods on node classification under both supervised and zero-shot settings.
+                            </font>
+                        </p>
+                    </figcaption>
 
 
                 <h4 class="title is-4">Generalization for Multitasking Graph Learner.</h4>
                 <p>
-                    Performance comparison of various instruction mixtures in supervised learning on the Arxiv dataset and the zero-shot setting on the Cora dataset for node classification.
+                    ...
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result2.png" alt="Teaser" width="50%" style="margin:0 auto">
-
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 5:</b> Performance comparison of various instruction mixtures in supervised learning on the Arxiv dataset and the zero-shot setting on the Cora dataset for node classification.
+                            </font>
+                        </p>
+                    </figcaption>
 
 
 
 
                 <h4 class="title is-4">Ablation Study</h4>
                 <p>
-                    Module ablation study under both supervised and zero-shot settings to analyze the individual contributions.
+                    ...
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result3.png" alt="Teaser" width="50%" style="margin:0 auto">
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 5:</b> Module ablation study under both supervised and zero-shot settings to analyze the individual contributions.
+                            </font>
+                        </p>
+                    </figcaption>
 
 
 
 
                 <h4 class="title is-4">Time and Space Efficiency.</h4>
                 <p>
-                    Study on the time and space efficiency of our GraphGPT during both the training and inference stages.
+                    ...
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result4.png" alt="Teaser" width="50%" style="margin:0 auto">
-
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 5:</b> Study on the time and space efficiency of our GraphGPT during both the training and inference stages.
+                            </font>
+                        </p>
+                    </figcaption>
 
 
                 <h4 class="title is-4">Model Inference Efficiency.</h4>
                 <p>
-                    Inference efficiency study of our GraphGPT Training Efficiency with Graph Instruction Tuning. 
+                    ... 
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result5.png" alt="Teaser" width="50%" style="margin:0 auto">
-
+                    <figcaption>
+                        <p style="text-align: center;">
+                            <font color="061E61">
+                                <b>Figure 5:</b> Inference efficiency study of our GraphGPT Training Efficiency with Graph Instruction Tuning.
+                            </font>
+                        </p>
+                    </figcaption>
+                    
                 
             </div>
         </div>
