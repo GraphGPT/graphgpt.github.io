@@ -196,7 +196,7 @@
                     <ul>
                         <li>
                             <b>Structural Information Encoding with Text-Graph Grounding.</b> ...
-                            <img class="columns is-centered has-text-centered" src="./static/images/config.png" alt="Teaser" width="85%"
+                            <img class="columns is-centered has-text-centered" src="./static/images/config.png" alt="Teaser" width="50%"
                          style="margin:0 auto">
                         </li>
                         <li>
@@ -287,19 +287,11 @@
         <!-- Experiments -->
         <div class="columns is-centered">
             <div class="column is-full-width">
-                <h2 class="title is-3">• Performance comparison of various methods on node classification under both supervised and zero-shot settings.</h2>
+                <h2 class="title is-3">• Experiments.</h2>
 
                 <div class="content has-text-justified">
                     <p>
-                        Further instruction tuning (IT) is necessary to enhance the capabilities and controllability of LLM.
-                        To facilitate the development of any-to-any MM-LLM, we propose a novel Modality-switching Instruction Tuning (<b>MosIT</b>).
-                        As illustrated in Figure 4, when an IT dialogue sample is fed into the system, the LLM reconstructs and generates the textual
-                        content of input (and represents the multimodal content with the multimodal signal tokens).
-                        The optimization is imposed based on gold annotations and LLM's outputs.
-                        In addition to the LLM tuning, we also fine-tune the decoding end of GraphGPT.
-                        We align the modal signal token representation encoded by the output projection with the gold multimodal caption
-                        representation encoded by the diffusion condition encoder.
-                        Thereby, the comprehensive tuning process brings closer to the goal of faithful and effective interaction with users.
+                        ...
                     </p>
                     <br>
                     <img class="columns is-centered has-text-centered" src="./static/images/instruction_tuning.png" alt="Teaser" width="100%"
@@ -320,8 +312,44 @@
                 <p>
                     Performance comparison of various methods on node classification under both supervised and zero-shot settings.
                 </p>
-                <img class="columns is-centered has-text-centered" src="./static/images/result.png" alt="Teaser" width="100%" style="margin:0 auto">
+                <img class="columns is-centered has-text-centered" src="./static/images/result1.png" alt="Teaser" width="100%" style="margin:0 auto">
 
+
+
+                <h4 class="title is-4">Generalization for Multitasking Graph Learner.</h4>
+                <p>
+                    Performance comparison of various instruction mixtures in supervised learning on the Arxiv dataset and the zero-shot setting on the Cora dataset for node classification.
+                </p>
+                <img class="columns is-centered has-text-centered" src="./static/images/result2.png" alt="Teaser" width="100%" style="margin:0 auto">
+
+
+
+
+
+                <h4 class="title is-4">Overall Performance</h4>
+                <p>
+                    Module ablation study under both supervised and zero-shot settings to analyze the individual contributions.
+                </p>
+                <img class="columns is-centered has-text-centered" src="./static/images/result3.png" alt="Teaser" width="100%" style="margin:0 auto">
+
+
+
+
+                <h4 class="title is-4">Module Ablation Study.</h4>
+                <p>
+                    Study on the time and space efficiency of our GraphGPT during both the training and inference stages.
+                </p>
+                <img class="columns is-centered has-text-centered" src="./static/images/result4.png" alt="Teaser" width="100%" style="margin:0 auto">
+
+
+
+                <h4 class="title is-4">Model Inference Efficiency.</h4>
+                <p>
+                    Inference efficiency study of our GraphGPT Training Efficiency with Graph Instruction Tuning. 
+                </p>
+                <img class="columns is-centered has-text-centered" src="./static/images/result5.png" alt="Teaser" width="100%" style="margin:0 auto">
+
+                
             </div>
         </div>
 
