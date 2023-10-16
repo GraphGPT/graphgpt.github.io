@@ -233,7 +233,7 @@
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 2:</b> Our instruction designs for graph matching task (upper), node classification (middle) and link prediction (lower).
+                                <b>Figure 3:</b> Our instruction designs for graph matching task (upper), node classification (middle) and link prediction (lower).
                             </font>
                         </p>
                     </figcaption>
@@ -287,7 +287,7 @@
         <!-- Experiments -->
         <div class="columns is-centered">
             <div class="column is-full-width">
-                <h2 class="title is-3">• Experiments.</h2>
+                <h2 class="title is-3">• Experiments</h2>
 
                 <div class="content has-text-justified">
 <!--                     <p>
@@ -310,7 +310,7 @@
 
                 <h4 class="title is-4">Overall Performance</h4>
                 <p>
-                    ...
+                    We conduct experiments on the node classification task, evaluating both supervised and zero-shot scenarios. The overall performance is presented in Table 1. Supervised Task Settings: We train the models on a specific dataset and evaluated their performance on the corresponding test set (e.g., training on Arxiv-Arxiv and testing on the Arxiv test set). Zero-Shot Task Settings: We train the models on a specific dataset and test them on other datasets without any additional training (e.g., training on Arxiv-PubMed and testing on the PubMed dataset). To account for variations in the number of classes across different datasets, we employed a classifier trained with transfer data, typically a linear layer, when testing GNN-based models. In Table 1, "-7B-" represents the parameter scale, while "-v1.1-" and "-v1.5-" indicate different versions of the base Vicuna model. "-stage2" indicates that only the second stage tuning is adopted. "-std" and "-cot" denote the use of the standard and generated COT instruction datasets, respectively.
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result1.png" alt="Teaser" width="100%" style="margin:0 auto">
                     <figcaption>
@@ -324,7 +324,7 @@
 
                 <h4 class="title is-4">Generalization for Multitasking Graph Learner.</h4>
                 <p>
-                    ...
+                       we explore the generalization ability of our model by incorporating more instruction data to fine-tune the LLM for effectively handling various types of tasks.
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result2.png" alt="Teaser" width="50%" style="margin:0 auto">
                     <figcaption>
@@ -340,13 +340,13 @@
 
                 <h4 class="title is-4">Ablation Study</h4>
                 <p>
-                    ...
+                    We conduct an ablation study to investigate the individual contributions of different sub-modules of our proposed framework, and the results are reported in Table 4. 
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result3.png" alt="Teaser" width="50%" style="margin:0 auto">
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 5:</b> Module ablation study under both supervised and zero-shot settings to analyze the individual contributions.
+                                <b>Figure 6:</b> Module ablation study under both supervised and zero-shot settings to analyze the individual contributions.
                             </font>
                         </p>
                     </figcaption>
@@ -362,7 +362,7 @@
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 5:</b> Study on the time and space efficiency of our GraphGPT during both the training and inference stages.
+                                <b>Figure 7:</b> Study on the time and space efficiency of our GraphGPT during both the training and inference stages.
                             </font>
                         </p>
                     </figcaption>
@@ -370,13 +370,13 @@
 
                 <h4 class="title is-4">Model Inference Efficiency.</h4>
                 <p>
-                    ... 
+                    The study aims to assess the computational efficiency of our model during both the model training and inference stages.
                 </p>
                 <img class="columns is-centered has-text-centered" src="./static/images/result5.png" alt="Teaser" width="50%" style="margin:0 auto">
                     <figcaption>
                         <p style="text-align: center;">
                             <font color="061E61">
-                                <b>Figure 5:</b> Inference efficiency study of our GraphGPT Training Efficiency with Graph Instruction Tuning.
+                                <b>Figure 8:</b> Inference efficiency study of our GraphGPT Training Efficiency with Graph Instruction Tuning.
                             </font>
                         </p>
                     </figcaption>
@@ -404,8 +404,8 @@
 
                 <br/>
                 <!--            Example-1-->
-                <h3 class="title is-4">• Dem. gif</h3>
-                    <a href="https://miro.medium.com/v2/resize:fit:679/0*nu7giaItaETOmJ_d.gif">dem-gif</a>
+                <h3 class="title is-4">• Demo. gif</h3>
+                    <a href="https://miro.medium.com/v2/resize:fit:679/0*nu7giaItaETOmJ_d.gif">demo.-gif</a>
 <!--                 <div class="content has-text-justified">
 
                     <div class="wrapper svelte-nab2ao"
