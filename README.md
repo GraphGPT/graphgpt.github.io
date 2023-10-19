@@ -3,7 +3,7 @@
 
 This is the repository that contains the source code for the [GraphGPT project page](https://graphgpt.github.io/).
 
-If you use GPT in your project, please kindly cite:
+If you use GraphGPT in your project, please kindly cite:
 ```
 
 ```
